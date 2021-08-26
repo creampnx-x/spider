@@ -1,5 +1,7 @@
 # spider
 自动报平安
+## 声明
+https://s.bjfu.edu.cn/robots.txt <br>访问是404
 ## 需要环境
   node v10.0 ++
 ## 包管理
