@@ -1,22 +1,22 @@
 # spider
-自动报平安
+北京林业法大学自动报平安
 ## 声明
-https://s.bjfu.edu.cn/robots.txt <br>访问是404
+https://s.bjfu.edu.cn/robots.txt 访问是404
 ## 需要环境
-  node v10.0 ++
-## 包管理
-  详情查看 package.json
-## 执行
+  nodejs v10.0 以上
+## 执行（命令行）
  ```bash
- git clone `url`
+ git clone []
  ```
  ``` bash
- yarn __OR__ npm i 
+ yarn 
+ # 或者
+ npm install 
  ```
  ```bash
  node index [id] [password] 
  例如:
- node index 201002716 12345678
+ node index 123432 12345678
  ```
 ### 注意
 目前仅支持上报上一次的数据！
@@ -26,7 +26,7 @@ https://s.bjfu.edu.cn/robots.txt <br>访问是404
 function nodeScheduleRule(){
 	var rule = new nodeSchedule.RecurrenceRule();
 	rule.hour =9 // 设置小时
-  rule.minute = 10 // 分钟
+  	rule.minute = 10 // 分钟
 	nodeSchedule.scheduleJob(rule,test);
 }
 ```
