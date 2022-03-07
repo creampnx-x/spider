@@ -1,12 +1,12 @@
 # spider
-北京林业法大学自动报平安
+北京林业大学自动报平安
 ## 声明
 https://s.bjfu.edu.cn/robots.txt 访问是404
 ## 需要环境
   nodejs v10.0 以上
 ## 执行（命令行）
  ```bash
- git clone []
+ git clone https://github.com/mapinxue4y/spider.git
  ```
  ``` bash
  yarn 
