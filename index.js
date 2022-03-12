@@ -3,8 +3,8 @@ const nodeSchedule = require('node-schedule');
 
 function nodeScheduleRule() {
 	const rule = new nodeSchedule.RecurrenceRule();
-	rule.hour = 9; //设置时间
-	rule.minute = 10
+	rule.hour = 10; //设置时间
+	rule.minute = 0;
 	nodeSchedule.scheduleJob(rule, test);
 }
 
@@ -42,16 +42,14 @@ async function test() {
 	log.click();
 
 	console.log('now,it is log in!');
-	//报平安页面
-	//await page.waitForNavigation();
 	let pageSec = await browser.newPage();
 	setTimeout(async () => {
 		await pageSec.goto('https://s.bjfu.edu.cn/tp_fp/view?m=fp#from=hall&serveID=99f0cf19-3ca4-4786-badb-521f0f734cad&act=fp/serveapply', { waitUntil: 'networkidle0' });
 		let commit = await pageSec.$('#commit');
 		commit.click();
 		console.log('it looks like that works are done.')
+		setTimeout(() => browser.close(), 30000)
 	}, 5000);
-	browser.close();
 	/* 
 	页面分析
 	返回，用于测试
